@@ -63,9 +63,7 @@ define(function (require, exports, module) {
                 editor.setCursorPos(matchingBrace.to.line, matchingBrace.to.ch + 1);
             }
         }
-
     }
-
 
     var COMMAND_ID = "davidwaterston.goto-matching-bracket";
     CommandManager.register("Go to Matching Bracket", COMMAND_ID, gotoMatchingBracket);
@@ -77,5 +75,4 @@ define(function (require, exports, module) {
         Menus.LAST_IN_SECTION,
         Menus.MenuSection.NAVIGATE_GOTO_COMMANDS
     );
-
 });
