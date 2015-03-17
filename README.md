@@ -1,5 +1,5 @@
 ## 'Go to Matching Bracket' in Brackets editor
-  
+version 1.1.0
   
 A [Brackets](http://brackets.io/) extension to instantly locate and place the cursor on the matching bracket to the one under the cursor. Adds an entry called 'Go to Matching Bracket' to the 'Navigate' menu. with a shortcut of Command-Alt-] (or Ctrl-Alt-] on Windows).
 
@@ -17,6 +17,16 @@ Open Brackets and click Help > Show Extensions Folder.
 Clone the extension into the user subdirectory:
 
     git clone git://github.com/davidwaterston/goto-matching-bracket.git user/davidwaterston.goto-matching-bracket
+  
+  
+##Languages
+'Go to Matching Bracket' is currently only available in English. While this won't stop the extension working in other locales it will mean that the (single) menu item will appear in English, regardless of your locale.  
+Should you wish to see it translated to your own language please let me know the translation for the string "Go to Matching Bracket" in your language.
+  
+  
+## Release History
+ - 2015-03-17: v1.1.0 - Added internationalisation support. Currently only English is available.  
+ - 2015-03-16: v1.0.0 - Initial release.
   
   
 ## License

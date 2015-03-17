@@ -34,6 +34,7 @@ define(function (require, exports, module) {
     var CommandManager = brackets.getModule("command/CommandManager");
     var EditorManager = brackets.getModule("editor/EditorManager");
     var Menus = brackets.getModule("command/Menus");
+    var Strings = require("strings");
 
     var SEARCH_CONFIG = {
         maxScanLineLength: 10000,
@@ -68,7 +69,7 @@ define(function (require, exports, module) {
 
 
     var COMMAND_ID = "davidwaterston.goto-matching-bracket";
-    CommandManager.register("Go to Matching Bracket", COMMAND_ID, gotoMatchingBracket);
+    CommandManager.register(Strings.MENU_NAVIGATE_GOTO_MATCHING_BRACKET, COMMAND_ID, gotoMatchingBracket);
 
     var menu = Menus.getMenu(Menus.AppMenuBar.NAVIGATE_MENU);
     menu.addMenuItem(
