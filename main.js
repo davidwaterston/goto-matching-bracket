@@ -1,5 +1,6 @@
 /*
  * Brackets 'go to matching bracket' extension.
+ * Version 1.2.0
  *
  * Copyright (c) 2015 David Waterston. All rights reserved.
  * Distributed under an MIT license:
@@ -25,30 +26,37 @@
  */
 
 /*jslint vars: true, plusplus: true, devel: true, regexp: true, nomen: true, indent: 4, maxerr: 50 */
-/*global define, $, brackets */
+/*global define, brackets */
 
-define(function (require, exports, module) {
+define(function (require) {
 
     "use strict";
 
     var CommandManager = brackets.getModule("command/CommandManager");
     var EditorManager = brackets.getModule("editor/EditorManager");
     var Menus = brackets.getModule("command/Menus");
+    var PreferencesManager = brackets.getModule("preferences/PreferencesManager");
     var Strings = require("strings");
 
-    var SEARCH_CONFIG = {
-        maxScanLineLength: 10000,
-        maxScanLines: 5000
-    };
+    var preferences;
+    var preferencesId = "com.github.davidwaterston.gotoMatchingBracket";
+    var defaultPreferences = {maxScanLineLength: 10000, maxScanLines: 5000};
 
     var charsToMatch = {
         "(": ")",
         ")": ")",
         "[": "[",
         "]": "]",
-        "{": "{}",
+        "{": "{",
         "}": "}"
     };
+
+
+    function loadPreferences() {
+        preferences = PreferencesManager.getExtensionPrefs(preferencesId);
+        preferences.definePreference("maxScanLineLength", "integer", defaultPreferences.maxScanLineLength);
+        preferences.definePreference("maxScanLines", "integer", defaultPreferences.maxScanLines);
+    }
 
 
     function gotoMatchingBracket() {
@@ -59,14 +67,23 @@ define(function (require, exports, module) {
         var validChar = (charsToMatch[line.charAt(cursorPos.ch)]) || (cursorPos.ch >= 0 && charsToMatch[line.charAt(cursorPos.ch - 1)]);
 
         if (validChar) {
-            var matchingBrace = editor._codeMirror.findMatchingBracket(editor.getCursorPos(), false, SEARCH_CONFIG);
-            if (matchingBrace.match) {
+            var matchingBrace = editor._codeMirror.findMatchingBracket(
+                editor.getCursorPos(),
+                false,
+                {
+                    maxScanLineLength: preferences.get("maxScanLineLength"),
+                    maxScanLines: preferences.get("maxScanLines")
+                }
+            );
+            if (matchingBrace && matchingBrace.match) {
                 editor.setCursorPos(matchingBrace.to.line, matchingBrace.to.ch + 1);
             }
         }
 
     }
 
+
+    loadPreferences();
 
     var COMMAND_ID = "davidwaterston.goto-matching-bracket";
     CommandManager.register(Strings.MENU_NAVIGATE_GOTO_MATCHING_BRACKET, COMMAND_ID, gotoMatchingBracket);

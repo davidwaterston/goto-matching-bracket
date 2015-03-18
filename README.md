@@ -1,5 +1,5 @@
 ## 'Go to Matching Bracket' in Brackets editor
-version 1.1.0
+version 1.2.0
   
 A [Brackets](http://brackets.io/) extension to instantly locate and place the cursor on the matching bracket to the one under the cursor. Adds an entry called 'Go to Matching Bracket' to the 'Navigate' menu. with a shortcut of Command-Alt-] (or Ctrl-Alt-] on Windows).
 
@@ -24,9 +24,32 @@ Clone the extension into the user subdirectory:
 Should you wish to see it translated to your own language please let me know the translation for the string "Go to Matching Bracket" in your language.
   
   
+## Preferences
+There are two preferences which can be set in your Brackets Preferences File to override the default behaviour of this extension:  
+
+| Preference | Description | Default Value |  
+| :--------- | :---------- | :------------ |  
+| maxScanLines | The maximum number of lines that will be scanned (searched) to find a match. If, after scanning this number of lines, no match is found then the search will give up _even if a matching bracket exists in the file_. Unless you are working on very large files you are unlikely to want to change this value. | 5000 |  
+| maxScanLineLength | The maximum number of characters that will be scanned (searched) on the current line to find a match. If, after scanning this number of characters on the current line, no match is found then the search will give up _even if a matching bracket exists in the line_. As the default is set very high, you are unlikely to want to change this value. | 10000 |  
+  
+Should you find that you need to override either of the default values this can be done by editing your preference file using the Brackets _Debug_... _Open Preferences File_ menu item and adding either, or both of the following to it: 
+
+"com.github.davidwaterston.gotoMatchingBracket.maxScanLines": 20000,
+"com.github.davidwaterston.gotoMatchingBracket.maxScanLineLength": 1000,
+
+You should, of course, alter the values (after the ':') to the required amount.
+  
+  
+## Compatibility
+This extension has been tested and confirmed to work on Brackets versions 1.2 and later. 
+  
+  
 ## Release History
- - 2015-03-17: v1.1.0 - Added internationalisation support. Currently only English is available.  
- - 2015-03-16: v1.0.0 - Initial release.
+| Date | Version | Summary of Change |  
+| :--- | :------ | :---------------- | 
+| 2015/03/18 | v1.2.0 | Added two user-definable preferences: maxScanLineLength and maxScanLines.  See above for more details. |  
+| 2015/03/17 | v1.1.0 | Added internationalisation support. Currently only English is available. |    
+| 2015/03/16 | v1.0.0 | Initial release. |  
   
   
 ## License
