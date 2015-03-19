@@ -44,6 +44,30 @@ You should, of course, alter the values (after the ':') to the required amount.
 This extension has been tested and confirmed to work on Brackets versions 1.2 and later. 
   
   
+## Frequently Asked Questions
+**Q: Why doesn't it do anything?**  
+A: There are a few reasons the extension might not appear to be working. If you are working on a very large file (> 5000 lines) and the opening and closing brackets are far apart then the search is probably giving up before a match is found. You can increase the number of lines searched by changing the _maxScanLines_ preference - see the notes above for details. The other likely reason for not finding a match is that there isn't one because (a) it doesn't physically exist in the file or (b) the brackets are mismatched. Consider this example:  
+  
+ (  {     ( )   ) }  
+   
+The first opening bracket is closed too soon so Brackets considers that it does not have a matching closing bracket and no match will be found.  
+Failure to find a match is a good indication that the logic of your code is broken.  
+  
+**Q: How can I change the hotkey your extension uses?**  
+A: It can be difficult to choose a hotkey for an extension. While it's easy enough to avoid the keys assigned by Brackets itself, it's impossible to know what other extensions may be using (or even what external apps might be listening for). If you find that the default key combination (CMD-ALT-] / CTRL-ALT-]) is not suitable you can override my choice by editing your _User Key Map_ file. This is done using the _Debug_... _Open User Key Map_ menu item and adding in a new entry like this in the _overrides_ section:  
+  
+"Cmd-Shift-Z": "davidwaterston.goto-matching-bracket"
+
+where you would replace the _Cmd-Shift-Z_ with your preferred key combination.  
+You can find more details about the User Key Map file and the available key combinations at [https://github.com/adobe/brackets/wiki/User-Key-Bindings](https://github.com/adobe/brackets/wiki/User-Key-Bindings)  
+  
+**Q: When will the extension be available in "my language"?**  
+A: I'm aware that the appearance of the English text for the menu item I add can be very jarring if you're using Brackets in another language. I'm adding translations whenever I can but I rely on finding a native speaker who can translate the text. If you're able to translate the text for me please let me know by commenting in _Issues_.  
+  
+**Q: The translation you have for "my language" is totally wrong!**    
+A: That's not really a question but, if you think one of the translations is wrong or could be improved, please let me know by commenting in _Issues_.  
+  
+  
 ## Release History
 | Date | Version | Summary of Change |  
 | :--- | :------ | :---------------- | 
