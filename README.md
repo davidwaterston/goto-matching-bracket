@@ -5,6 +5,8 @@ A [Brackets](http://brackets.io/) extension to instantly locate and place the cu
 
 The 'brackets' characters that are matched are (, ), {, }, [ and ].
   
+<img src="https://dvolvr.files.wordpress.com/2015/03/matchingbrackets1.gif" width="800" alt="Brackets Goto Matching Bracket in action" />
+  
   
 ## Install
 
