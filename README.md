@@ -1,5 +1,5 @@
 ## 'Go to Matching Bracket' in Brackets editor
-version 1.2.0
+version 1.3.0
   
 A [Brackets](http://brackets.io/) extension to instantly locate and place the cursor on the matching bracket to the one under the cursor. Adds an entry called 'Go to Matching Bracket' to the 'Navigate' menu. with a shortcut of Command-Alt-] (or Ctrl-Alt-] on Windows).
 
@@ -18,12 +18,23 @@ If that's too easy for you then an alternative is to:
 Open Brackets and click Help > Show Extensions Folder.  
 Clone the extension into the user subdirectory:
 
-    git clone git://github.com/davidwaterston/goto-matching-bracket.git user/davidwaterston.goto-matching-bracket
+```
+git clone git://github.com/davidwaterston/goto-matching-bracket.git user/davidwaterston.goto-matching-bracket
+```
   
   
 ##Languages
-'Go to Matching Bracket' is currently only available in English. While this won't stop the extension working in other locales it will mean that the (single) menu item will appear in English, regardless of your locale.  
-Should you wish to see it translated to your own language please let me know the translation for the string "Go to Matching Bracket" in your language.
+'Go to Matching Bracket' is currently available in:
+ - Czech
+ - English
+ - German
+ - Italian
+ - Polish
+ - Portuguese
+ - Russian
+  
+If your preferred language is not included the extension will still work but the (single) menu item will appear in English.  
+Should you wish to see it translated into your own language (or you think one of the existing translations is wrong) please let me know by commenting in [_Issues_](https://github.com/davidwaterston/goto-matching-bracket/issues).
   
   
 ## Preferences
@@ -35,10 +46,12 @@ There are two preferences which can be set in your Brackets Preferences File to 
 | maxScanLineLength | The maximum number of characters that will be scanned (searched) on the current line to find a match. If, after scanning this number of characters on the current line, no match is found then the search will give up _even if a matching bracket exists in the line_. As the default is set very high, you are unlikely to want to change this value. | 10000 |  
   
 Should you find that you need to override either of the default values this can be done by editing your preference file using the Brackets _Debug_... _Open Preferences File_ menu item and adding either, or both of the following to it: 
-
+  
+```
 "com.github.davidwaterston.gotoMatchingBracket.maxScanLines": 20000,
 "com.github.davidwaterston.gotoMatchingBracket.maxScanLineLength": 1000,
-
+```
+  
 You should, of course, alter the values (after the ':') to the required amount.
   
   
@@ -50,7 +63,9 @@ This extension has been tested and confirmed to work on Brackets versions 1.2 an
 **Q: Why doesn't it do anything?**  
 A: There are a few reasons the extension might not appear to be working. If you are working on a very large file (> 5000 lines) and the opening and closing brackets are far apart then the search is probably giving up before a match is found. You can increase the number of lines searched by changing the _maxScanLines_ preference - see the notes above for details. The other likely reason for not finding a match is that there isn't one because (a) it doesn't physically exist in the file or (b) the brackets are mismatched. Consider this example:  
   
+```
  (  {     ( )   ) }  
+```
    
 The first opening bracket is closed too soon so Brackets considers that it does not have a matching closing bracket and no match will be found.  
 Failure to find a match is a good indication that the logic of your code is broken.  
@@ -58,21 +73,24 @@ Failure to find a match is a good indication that the logic of your code is brok
 **Q: How can I change the hotkey your extension uses?**  
 A: It can be difficult to choose a hotkey for an extension. While it's easy enough to avoid the keys assigned by Brackets itself, it's impossible to know what other extensions may be using (or even what external apps might be listening for). If you find that the default key combination (CMD-ALT-] / CTRL-ALT-]) is not suitable you can override my choice by editing your _User Key Map_ file. This is done using the _Debug_... _Open User Key Map_ menu item and adding in a new entry like this in the _overrides_ section:  
   
+```
 "Cmd-Shift-Z": "davidwaterston.goto-matching-bracket"
-
+```
+  
 where you would replace the _Cmd-Shift-Z_ with your preferred key combination.  
 You can find more details about the User Key Map file and the available key combinations at [https://github.com/adobe/brackets/wiki/User-Key-Bindings](https://github.com/adobe/brackets/wiki/User-Key-Bindings)  
   
 **Q: When will the extension be available in "my language"?**  
-A: I'm aware that the appearance of the English text for the menu item I add can be very jarring if you're using Brackets in another language. I'm adding translations whenever I can but I rely on finding a native speaker who can translate the text. If you're able to translate the text for me please let me know by commenting in _Issues_.  
+A: I'm aware that the appearance of the English text for the menu item I add can be very jarring if you're using Brackets in another language. I'm adding translations whenever I can but I rely on finding a native speaker who can translate the text. If you're able to translate the text for me please let me know by commenting in [_Issues_](https://github.com/davidwaterston/goto-matching-bracket/issues).  
   
 **Q: The translation you have for "my language" is totally wrong!**    
-A: That's not really a question but, if you think one of the translations is wrong or could be improved, please let me know by commenting in _Issues_.  
+A: That's not really a question but, if you think one of the translations is wrong or could be improved, please let me know by commenting in [_Issues_](https://github.com/davidwaterston/goto-matching-bracket/issues).  
   
   
 ## Release History
 | Date | Version | Summary of Change |  
 | :--- | :------ | :---------------- | 
+| 2015/03/19 | v1.3.0 | Added translated text in Czech, German, Italian, Polish, Portuguese and Russian. |  
 | 2015/03/18 | v1.2.0 | Added two user-definable preferences: maxScanLineLength and maxScanLines.  See above for more details. |  
 | 2015/03/17 | v1.1.0 | Added internationalisation support. Currently only English is available. |    
 | 2015/03/16 | v1.0.0 | Initial release. |  

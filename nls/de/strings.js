@@ -25,18 +25,8 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */
 /*global define */
 
-define(function (require, exports, module) {
+define({
 
-    "use strict";
-
-    module.exports = {
-        root: true,
-        "cs": true,
-        "de": true,
-        "it": true,
-        "pl": true,
-        "pt-pt": true,
-        "ru": true
-    };
+    "MENU_NAVIGATE_GOTO_MATCHING_BRACKET": "Zum passenden Klammer gehen"
 
 });
