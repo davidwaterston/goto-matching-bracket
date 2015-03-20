@@ -43,7 +43,7 @@ There are two preferences which can be set in your Brackets Preferences File to 
 | Preference | Description | Default Value |  
 | :--------- | :---------- | :------------ |  
 | maxScanLines | The maximum number of lines that will be scanned (searched) to find a match. If, after scanning this number of lines, no match is found then the search will give up _even if a matching bracket exists in the file_. Unless you are working on very large files you are unlikely to want to change this value. | 5000 |  
-| maxScanLineLength | The maximum number of characters that will be scanned (searched) on the current line to find a match. If, after scanning this number of characters on the current line, no match is found then the search will give up _even if a matching bracket exists in the line_. As the default is set very high, you are unlikely to want to change this value. | 10000 |  
+| maxScanLineLength | The maximum length that a line may be to be considered for scanning. Lines that are longer than this length will be skipped (the scan will continue on to the next line, if we have not reached the start/end of the file). For example, if this value is set to 10 then any line whose length is greater than 10 will be ignored when looking for a matching bracket. This, of course, means that it would be possible to miss a match if this value is set too low. | 10000 |  
   
 Should you find that you need to override either of the default values this can be done by editing your preference file using the Brackets _Debug_... _Open Preferences File_ menu item and adding either, or both of the following to it: 
   
@@ -69,6 +69,7 @@ A: There are a few reasons the extension might not appear to be working. If you 
    
 The first opening bracket is closed too soon so Brackets considers that it does not have a matching closing bracket and no match will be found.  
 Failure to find a match is a good indication that the logic of your code is broken.  
+Lastly, if the _maxScanLineLength_ preference is set too low then some lines in your file may not be getting included in the search. See _Preferences_ above for more details.  
   
 **Q: How can I change the hotkey your extension uses?**  
 A: It can be difficult to choose a hotkey for an extension. While it's easy enough to avoid the keys assigned by Brackets itself, it's impossible to know what other extensions may be using (or even what external apps might be listening for). If you find that the default key combination (CMD-ALT-] / CTRL-ALT-]) is not suitable you can override my choice by editing your _User Key Map_ file. This is done using the _Debug_... _Open User Key Map_ menu item and adding in a new entry like this in the _overrides_ section:  
