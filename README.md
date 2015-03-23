@@ -1,5 +1,5 @@
 ## 'Go to Matching Bracket' in Brackets editor
-version 1.3.0
+version 1.4.0
   
 A [Brackets](http://brackets.io/) extension to instantly locate and place the cursor on the matching bracket to the one under the cursor. Adds an entry called 'Go to Matching Bracket' to the 'Navigate' menu. with a shortcut of Command-Alt-] (or Ctrl-Alt-] on Windows).
 
@@ -91,6 +91,7 @@ A: That's not really a question but, if you think one of the translations is wro
 ## Release History
 | Date | Version | Summary of Change |  
 | :--- | :------ | :---------------- | 
+| 2015/03/23 | v1.4.0 | Updated the Command Id of the extension to be a more standards-compliant "davidwaterston.goToMatchingBracket.findMatch" (notice the addition of the 'findMatch'). The main reason for this was to ensure that the extension name would appear when displayed in redmunds's [Display Shortcuts](https://github.com/redmunds/brackets-display-shortcuts) extension which adds a _Show Shortcuts_ item to the Brackets _Help_ menu. <img src="https://dvolvr.files.wordpress.com/2015/03/users_davidwaterston_library_application_support_brackets_extensions_user_davidwaterston_goto-matching-bracket_main_js__test2__e28094_brackets1.png" /> |
 | 2015/03/19 | v1.3.0 | Added translated text in Czech, German, Italian, Polish, Portuguese and Russian. |  
 | 2015/03/18 | v1.2.0 | Added two user-definable preferences: maxScanLineLength and maxScanLines.  See above for more details. |  
 | 2015/03/17 | v1.1.0 | Added internationalisation support. Currently only English is available. |    

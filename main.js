@@ -1,6 +1,6 @@
 /*
  * Brackets 'go to matching bracket' extension.
- * Version 1.3.0
+ * Version 1.4.0
  *
  * Copyright (c) 2015 David Waterston. All rights reserved.
  * Distributed under an MIT license:
@@ -85,7 +85,7 @@ define(function (require) {
 
     loadPreferences();
 
-    var COMMAND_ID = "davidwaterston.goto-matching-bracket";
+    var COMMAND_ID = "davidwaterston.goToMatchingBracket.findMatch";
     CommandManager.register(Strings.MENU_NAVIGATE_GOTO_MATCHING_BRACKET, COMMAND_ID, gotoMatchingBracket);
 
     var menu = Menus.getMenu(Menus.AppMenuBar.NAVIGATE_MENU);
