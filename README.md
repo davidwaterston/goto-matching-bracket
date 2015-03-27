@@ -1,9 +1,10 @@
 ## 'Go to Matching Bracket' in Brackets editor
 
-[![Join the chat at https://gitter.im/davidwaterston/goto-matching-bracket](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/davidwaterston/goto-matching-bracket?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/davidwaterston/goto-matching-bracket](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/davidwaterston/goto-matching-bracket?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  
+
 version 1.4.0
   
-A [Brackets](http://brackets.io/) extension to instantly locate and place the cursor on the matching bracket to the one under the cursor. Adds an entry called 'Go to Matching Bracket' to the 'Navigate' menu. with a shortcut of Command-Alt-] (or Ctrl-Alt-] on Windows).
+A [Brackets](http://brackets.io/) extension to instantly locate and place the cursor on the matching bracket to the one under the cursor. Adds an entry called _Go to Matching Bracket_ to the _Navigate_ menu with a shortcut of Command-Alt-] (Mac) or Ctrl-Alt-] (Windows).
 
 The 'brackets' characters that are matched are (, ), {, }, [ and ].
   
