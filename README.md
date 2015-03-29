@@ -1,8 +1,9 @@
 ## 'Go to Matching Bracket' in Brackets editor
 
-[![Join the chat at https://gitter.im/davidwaterston/goto-matching-bracket](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/davidwaterston/goto-matching-bracket?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  
-
-version 1.4.0
+<a href="http://semver.org" target="_blank" alt="Semantic Versioning"><img src="https://img.shields.io/badge/semver-1.5.0-lightgrey.svg?style=flat-square"></a>
+<a href="https://github.com/davidwaterston/goto-matching-bracket/blob/master/LICENSE" target="_blank" alt="MIT License"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"></a>
+<a href="#verifying-releases" alt="Releases signed with Gnu Privacy Guard"><img src="https://img.shields.io/badge/gpg-signed-green.svg?style=flat-square"></a>
+<a href="https://gitter.im/davidwaterston/goto-matching-bracket" target="_blank" alt="Join the chat at https://gitter.im/davidwaterston/goto-matching-bracket"><img src="https://badges.gitter.im/Join%20Chat.svg"></a>
   
 A [Brackets](http://brackets.io/) extension to instantly locate and place the cursor on the matching bracket to the one under the cursor. Adds an entry called _Go to Matching Bracket_ to the _Navigate_ menu with a shortcut of Command-Alt-] (Mac) or Ctrl-Alt-] (Windows).
 
@@ -94,6 +95,7 @@ A: That's not really a question but, if you think one of the translations is wro
 ## Release History
 | Date | Version | Summary of Change |  
 | :--- | :------ | :---------------- | 
+| 2015/03/29 | v1.5.0 | Documentation update. Added a License file and badges to the README.md to indicate the version number, the license type and that the releases are signed using Gnu Privacy Guard (GPG). I also added info about how to verify the signatures on releases/tags. In previous releases I have only increased the version number when there has been functional (no-documentation) changes made to the repo but from now on I will bump the version up even if only documentation has changed. |
 | 2015/03/23 | v1.4.0 | Updated the Command Id of the extension to be a more standards-compliant "davidwaterston.goToMatchingBracket.findMatch" (notice the addition of the 'findMatch'). The main reason for this was to ensure that the extension name would appear when displayed in redmunds's [Display Shortcuts](https://github.com/redmunds/brackets-display-shortcuts) extension which adds a _Show Shortcuts_ item to the Brackets _Help_ menu. <img src="https://dvolvr.files.wordpress.com/2015/03/users_davidwaterston_library_application_support_brackets_extensions_user_davidwaterston_goto-matching-bracket_main_js__test2__e28094_brackets1.png" /> |
 | 2015/03/19 | v1.3.0 | Added translated text in Czech, German, Italian, Polish, Portuguese and Russian. |  
 | 2015/03/18 | v1.2.0 | Added two user-definable preferences: maxScanLineLength and maxScanLines.  See above for more details. |  
@@ -101,13 +103,42 @@ A: That's not really a question but, if you think one of the translations is wro
 | 2015/03/16 | v1.0.0 | Initial release. |  
   
   
+## Verifying Releases
+I use <a href="http://semver.org" target="_blank" alt="Semantic Versioning">Semantic Versioning</a> to number releases. Each release is tagged with the appropriate version number and signed using <a href="https://www.gnupg.org" target="_blank" alt="Gnu Privacy Guard (GPG)">Gnu Privacy Guard (GPG)</a>. The public key used to sign releases is  
+```
+Name: David Waterston  
+Email: david@davidwaterston.com  
+Key ID: A7AD9C85  
+Signature: 71A9 DC13 447A 1E4F C6EB  5D64 DE08 A991 A7AD 9C85  
+```
+This public key is included in the repository with a SHA1 of 16d013451476fa4a1a67d6ad4b90583e205b53b1.  
+After cloning the repo, and assuming you have GPG installed correctly, you can import this key into your keychain
+```
+git cat-file blob pubkey | gpg --import
+```
+When this public key is successfully imported, you can use it to verify the integrity of any of the tagged releases of this repo
+```
+git tag -v v1.4.0
+```
+which should produce output similar to:
+```
+object 04f37a55784c1f3abc2cf927a935a488aa954035  
+type commit  
+tag v1.4.0  
+tagger David Waterston <david@davidwaterston.com> 1427387056 +0000  
+  
+Updated the Command Id of the extension to be a more standards-compliant.  
+  
+Updated the Command Id of the extension to be a more standards-compliant 'davidwaterston.goToMatchingBracket.findMatch' (notice the addition of the 'findMatch'). The main reason for this was to ensure that the extension name would appear when displayed in redmunds Display Shortcuts extension which adds a Show Shortcuts item to the Brackets Help menu.
+Also rewrote the text in the README.md for the maxScanLineLength preference as my understanding of this was completely wrong.
+gpg: Signature made Thu 26 Mar 16:24:16 2015 GMT using RSA key ID A7AD9C85
+gpg: Good signature from "David Waterston <david@davidwaterston.com>" [ultimate]
+```
+The important thing to notice here is that the RSA key ID matches mine (A7AD9C85) and the line that says that this is a good signature.  
+  
+  The public key can further be verified by checking the details held on <a href="http://pgp.mit.edu/pks/lookup?search=david%40davidwaterston.com&op=index&fingerprint=on&exact=on" target="_blank" alt="pgp.mit.edu">pgp.mit.edu</a>.
+  
+  
 ## License
-
-Copyright (c) 2015 David Waterston. All rights reserved.
-Distributed under an MIT license:
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Copyright (c) 2015 David Waterston. All rights reserved.  
+Distributed under an MIT license. See the [LICENSE](https://github.com/davidwaterston/goto-matching-bracket/blob/master/LICENSE) file for more details.
