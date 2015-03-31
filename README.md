@@ -1,6 +1,6 @@
 ## 'Go to Matching Bracket' in Brackets editor
 
-<a href="http://semver.org" target="_blank" alt="Semantic Versioning"><img src="https://img.shields.io/badge/semver-1.5.0-lightgrey.svg?style=flat-square"></a>
+<a href="http://semver.org" target="_blank" alt="Semantic Versioning"><img src="https://img.shields.io/badge/semver-1.6.0-lightgrey.svg?style=flat-square"></a>
 <a href="https://github.com/davidwaterston/goto-matching-bracket/blob/master/LICENSE" target="_blank" alt="MIT License"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"></a>
 <a href="#verifying-releases" alt="Releases signed with Gnu Privacy Guard"><img src="https://img.shields.io/badge/gpg-signed-green.svg?style=flat-square"></a>
 <a href="https://gitter.im/davidwaterston/goto-matching-bracket" target="_blank" alt="Join the chat at https://gitter.im/davidwaterston/goto-matching-bracket"><img src="https://badges.gitter.im/Join%20Chat.svg"></a>
@@ -95,6 +95,7 @@ A: That's not really a question but, if you think one of the translations is wro
 ## Release History
 | Date | Version | Summary of Change |  
 | :--- | :------ | :---------------- | 
+| 2015/03/31 | v1.6.0 | Added .editorconfig, to ensure consistency of whitespace across different editors and IDEs. |  
 | 2015/03/29 | v1.5.0 | Documentation update. Added a License file and badges to the README.md to indicate the version number, the license type and that the releases are signed using Gnu Privacy Guard (GPG). I also added info about how to verify the signatures on releases/tags. In previous releases I have only increased the version number when there has been functional (no-documentation) changes made to the repo but from now on I will bump the version up even if only documentation has changed. |
 | 2015/03/23 | v1.4.0 | Updated the Command Id of the extension to be a more standards-compliant "davidwaterston.goToMatchingBracket.findMatch" (notice the addition of the 'findMatch'). The main reason for this was to ensure that the extension name would appear when displayed in redmunds's [Display Shortcuts](https://github.com/redmunds/brackets-display-shortcuts) extension which adds a _Show Shortcuts_ item to the Brackets _Help_ menu. <img src="https://dvolvr.files.wordpress.com/2015/03/users_davidwaterston_library_application_support_brackets_extensions_user_davidwaterston_goto-matching-bracket_main_js__test2__e28094_brackets1.png" /> |
 | 2015/03/19 | v1.3.0 | Added translated text in Czech, German, Italian, Polish, Portuguese and Russian. |  

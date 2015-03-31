@@ -1,6 +1,5 @@
 /*
  * Brackets 'go to matching bracket' extension.
- * Version 1.4.0
  *
  * Copyright (c) 2015 David Waterston. All rights reserved.
  * Distributed under an MIT license:
