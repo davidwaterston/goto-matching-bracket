@@ -1,6 +1,6 @@
 ## 'Go to Matching Bracket' in Brackets editor
 
-<a href="http://semver.org" target="_blank" alt="Semantic Versioning"><img src="https://img.shields.io/badge/semver-1.6.0-lightgrey.svg?style=flat-square"></a>
+<a href="http://semver.org" target="_blank" alt="Semantic Versioning"><img src="https://img.shields.io/badge/semver-1.7.0-lightgrey.svg?style=flat-square"></a>
 <a href="https://github.com/davidwaterston/goto-matching-bracket/blob/master/LICENSE" target="_blank" alt="MIT License"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"></a>
 <a href="#verifying-releases" alt="Releases signed with Gnu Privacy Guard"><img src="https://img.shields.io/badge/gpg-signed-green.svg?style=flat-square"></a>
 <a href="https://gitter.im/davidwaterston/goto-matching-bracket" target="_blank" alt="Join the chat at https://gitter.im/davidwaterston/goto-matching-bracket"><img src="https://badges.gitter.im/Join%20Chat.svg"></a>
@@ -14,12 +14,13 @@ The 'brackets' characters that are matched are (, ), {, }, [ and ].
   
 ## Install
 
-The best way to install this extension is via the Brackets Extension Manager.
+The best way to install this extension is via the Brackets Extension Manager using the _File > Extension Manager..._ menu item. When the dialog opens you can search for the extension or, alternatively, click on the _Install from URL_ button and enter:   
+```
+https://github.com/davidwaterston/goto-matching-bracket
+```
+If you prefer to install using Git then you can pull directly from this repo:  
 
-
-If that's too easy for you then an alternative is to:
-
-Open Brackets and click Help > Show Extensions Folder.  
+Open Brackets and click _Help > Show Extensions Folder_.  
 Clone the extension into the user subdirectory:
 
 ```
@@ -42,21 +43,23 @@ Should you wish to see it translated into your own language (or you think one of
   
   
 ## Preferences
-There are two preferences which can be set in your Brackets Preferences File to override the default behaviour of this extension:  
+There are three preferences which can be set in your Brackets Preferences File to override the default behaviour of this extension:  
 
 | Preference | Description | Default Value |  
 | :--------- | :---------- | :------------ |  
+| enabled | Is the extension enabled (active) or not. If you believe the extension is causing a problem in Brackets or conflicting with another extension, this setting allows you to temporarily turn it off rather than uninstalling it. | true |  
 | maxScanLines | The maximum number of lines that will be scanned (searched) to find a match. If, after scanning this number of lines, no match is found then the search will give up _even if a matching bracket exists in the file_. Unless you are working on very large files you are unlikely to want to change this value. | 5000 |  
 | maxScanLineLength | The maximum length that a line may be to be considered for scanning. Lines that are longer than this length will be skipped (the scan will continue on to the next line, if we have not reached the start/end of the file). For example, if this value is set to 10 then any line whose length is greater than 10 will be ignored when looking for a matching bracket. This, of course, means that it would be possible to miss a match if this value is set too low. | 10000 |  
   
-Should you find that you need to override either of the default values this can be done by editing your preference file using the Brackets _Debug_... _Open Preferences File_ menu item and adding either, or both of the following to it: 
+Should you find that you need to override any of the default values this can be done by editing your preference file using the Brackets _Debug > Open Preferences File_ menu item and adding one, or more, of the following to it: 
   
 ```
+"com.github.davidwaterston.gotoMatchingBracket.enabled": true,
 "com.github.davidwaterston.gotoMatchingBracket.maxScanLines": 20000,
 "com.github.davidwaterston.gotoMatchingBracket.maxScanLineLength": 1000,
 ```
   
-You should, of course, alter the values (after the ':') to the required amount.
+You should, of course, alter the values (after the ':') to the required value.
   
   
 ## Compatibility
@@ -95,6 +98,7 @@ A: That's not really a question but, if you think one of the translations is wro
 ## Release History
 | Date | Version | Summary of Change |  
 | :--- | :------ | :---------------- | 
+| 2015/04/06 | v1.7.0 | Added new preference setting, _enabled_, which allows the extension to temporarily be turned off. |
 | 2015/03/31 | v1.6.0 | Added .editorconfig, to ensure consistency of whitespace across different editors and IDEs. |  
 | 2015/03/29 | v1.5.0 | Documentation update. Added a License file and badges to the README.md to indicate the version number, the license type and that the releases are signed using Gnu Privacy Guard (GPG). I also added info about how to verify the signatures on releases/tags. In previous releases I have only increased the version number when there has been functional (no-documentation) changes made to the repo but from now on I will bump the version up even if only documentation has changed. |
 | 2015/03/23 | v1.4.0 | Updated the Command Id of the extension to be a more standards-compliant "davidwaterston.goToMatchingBracket.findMatch" (notice the addition of the 'findMatch'). The main reason for this was to ensure that the extension name would appear when displayed in redmunds's [Display Shortcuts](https://github.com/redmunds/brackets-display-shortcuts) extension which adds a _Show Shortcuts_ item to the Brackets _Help_ menu. <img src="https://dvolvr.files.wordpress.com/2015/03/users_davidwaterston_library_application_support_brackets_extensions_user_davidwaterston_goto-matching-bracket_main_js__test2__e28094_brackets1.png" /> |
@@ -119,7 +123,7 @@ git cat-file blob pubkey | gpg --import
 ```
 When this public key is successfully imported, you can use it to verify the integrity of any of the tagged releases of this repo
 ```
-git tag -v v1.4.0
+git tag -v v1.7.0
 ```
 which should produce output similar to:
 ```

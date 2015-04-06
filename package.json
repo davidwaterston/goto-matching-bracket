@@ -3,7 +3,7 @@
     "title": "Go to Matching Bracket",
     "description": "Instantly locate and place the cursor on the matching bracket to the one under the cursor. Simply place the cursor on any one of {, }, (, ), [ or ] then press CTRL-ALT-] (CMD-ALT-] on Mac) or use the 'Navigate... Go to Matching Bracket' menu item to locate and place the cursor on the matching opening or closing bracket.",
     "homepage": "https://github.com/davidwaterston/goto-matching-bracket",
-    "version": "1.6.0",
+    "version": "1.7.0",
     "author": "David Waterston",
     "license": "MIT",
     "i18n": [
@@ -15,6 +15,14 @@
         "pt-pt",
         "ru"
     ],
+    "keywords": [
+        "brackets",
+        "braces",
+        "cursor"
+        "match",
+        "matching"
+    ],
+    "categories": "editing",
     "engines": {
         "brackets": ">=1.2.0"
     }

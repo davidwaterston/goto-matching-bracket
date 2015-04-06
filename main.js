@@ -39,7 +39,7 @@ define(function (require) {
 
     var preferences;
     var preferencesId = "com.github.davidwaterston.gotoMatchingBracket";
-    var defaultPreferences = {maxScanLineLength: 10000, maxScanLines: 5000};
+    var defaultPreferences = {enabled: true, maxScanLineLength: 10000, maxScanLines: 5000};
 
     var charsToMatch = {
         "(": ")",
@@ -52,9 +52,12 @@ define(function (require) {
 
 
     function loadPreferences() {
+
         preferences = PreferencesManager.getExtensionPrefs(preferencesId);
+        preferences.definePreference("enabled", "boolean", defaultPreferences.enabled);
         preferences.definePreference("maxScanLineLength", "integer", defaultPreferences.maxScanLineLength);
         preferences.definePreference("maxScanLines", "integer", defaultPreferences.maxScanLines);
+
     }
 
 
@@ -82,17 +85,26 @@ define(function (require) {
     }
 
 
+    function init() {
+
+        var COMMAND_ID = "davidwaterston.goToMatchingBracket.findMatch";
+        CommandManager.register(Strings.MENU_NAVIGATE_GOTO_MATCHING_BRACKET, COMMAND_ID, gotoMatchingBracket);
+
+        var menu = Menus.getMenu(Menus.AppMenuBar.NAVIGATE_MENU);
+        menu.addMenuItem(
+            COMMAND_ID,
+            "Ctrl-Alt-]",
+            Menus.LAST_IN_SECTION,
+            Menus.MenuSection.NAVIGATE_GOTO_COMMANDS
+        );
+
+    }
+
+
     loadPreferences();
 
-    var COMMAND_ID = "davidwaterston.goToMatchingBracket.findMatch";
-    CommandManager.register(Strings.MENU_NAVIGATE_GOTO_MATCHING_BRACKET, COMMAND_ID, gotoMatchingBracket);
-
-    var menu = Menus.getMenu(Menus.AppMenuBar.NAVIGATE_MENU);
-    menu.addMenuItem(
-        COMMAND_ID,
-        "Ctrl-Alt-]",
-        Menus.LAST_IN_SECTION,
-        Menus.MenuSection.NAVIGATE_GOTO_COMMANDS
-    );
+    if (preferences.get("enabled")) {
+        init();
+    }
 
 });
