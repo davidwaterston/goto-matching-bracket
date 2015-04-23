@@ -93,7 +93,7 @@ define(function (require) {
         var menu = Menus.getMenu(Menus.AppMenuBar.NAVIGATE_MENU);
         menu.addMenuItem(
             COMMAND_ID,
-            "Ctrl-Alt-]",
+            "Ctrl-Alt-Right",
             Menus.LAST_IN_SECTION,
             Menus.MenuSection.NAVIGATE_GOTO_COMMANDS
         );
