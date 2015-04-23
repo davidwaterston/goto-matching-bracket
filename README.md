@@ -1,6 +1,6 @@
 ## 'Go to Matching Bracket' in Brackets editor
 
-<a href="http://semver.org" target="_blank" alt="Semantic Versioning"><img src="https://img.shields.io/badge/semver-2.0.0-lightgrey.svg?style=flat-square"></a>
+<a href="http://semver.org" target="_blank" alt="Semantic Versioning"><img src="https://img.shields.io/badge/semver-2.0.1-lightgrey.svg?style=flat-square"></a>
 <a href="https://github.com/davidwaterston/goto-matching-bracket/blob/master/LICENSE" target="_blank" alt="MIT License"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"></a>
 <a href="#verifying-releases" alt="Releases signed with Gnu Privacy Guard"><img src="https://img.shields.io/badge/gpg-signed-green.svg?style=flat-square"></a>
 <a href="https://gitter.im/davidwaterston/goto-matching-bracket" target="_blank" alt="Join the chat at https://gitter.im/davidwaterston/goto-matching-bracket"><img src="https://badges.gitter.im/Join%20Chat.svg"></a>
@@ -98,6 +98,7 @@ A: That's not really a question but, if you think one of the translations is wro
 ## Release History
 | Date | Version | Summary of Change |  
 | :--- | :------ | :---------------- | 
+| 2015/04/23 | v2.0.1 | Bug fix: a comma went astray in the package.json, rendering it invalid |
 | 2015/04/23 | v2.0.0 | Breaking change: With the release of Brackets 1.3 the original keyboard shortcut used by this extension - Command-Alt-] (Mac) or Ctrl-Alt-] (Windows) - has been taken by the Brackets _Expand Current_ command. This release changes the default shortcut and confirms the extension continues to work in v1.3 |
 | 2015/04/06 | v1.7.0 | Added new preference setting, _enabled_, which allows the extension to temporarily be turned off. |
 | 2015/03/31 | v1.6.0 | Added .editorconfig, to ensure consistency of whitespace across different editors and IDEs. |  
