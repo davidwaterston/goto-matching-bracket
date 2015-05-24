@@ -1,15 +1,16 @@
 {
     "name": "davidwaterston.goto-matching-bracket",
     "title": "Go to Matching Bracket",
-    "description": "Instantly locate and place the cursor on the matching bracket to the one under the cursor. Simply place the cursor on any one of {, }, (, ), [ or ] then press CTRL-ALT-RIGHT (CMD-ALT-RIGHT on Mac) or use the 'Navigate... Go to Matching Bracket' menu item to locate and place the cursor on the matching opening or closing bracket. NOTE: v2.0.0 changes the hotkey for compatibility with Brackets 1.3.",
+    "description": "Instantly locate and place the cursor on the matching bracket to the one under the cursor. Simply place the cursor on any one of {, }, (, ), [ or ] then press CTRL-ALT-RIGHT (CMD-ALT-RIGHT on Mac) or use the 'Navigate... Go to Matching Bracket' menu item to locate and place the cursor on the matching opening or closing bracket. NOTE: v2.0.0 changed the hotkey for compatibility with Brackets 1.3.",
     "homepage": "https://github.com/davidwaterston/goto-matching-bracket",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "author": "David Waterston",
     "license": "MIT",
     "i18n": [
         "cs",
         "en",
         "de",
+        "fr",
         "it",
         "pl",
         "pt-pt",

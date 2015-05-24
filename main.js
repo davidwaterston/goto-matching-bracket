@@ -42,12 +42,12 @@ define(function (require) {
     var defaultPreferences = {enabled: true, maxScanLineLength: 10000, maxScanLines: 5000};
 
     var charsToMatch = {
-        "(": ")",
-        ")": ")",
-        "[": "[",
-        "]": "]",
-        "{": "{",
-        "}": "}"
+        "(": true,
+        ")": true,
+        "[": true,
+        "]": true,
+        "{": true,
+        "}": true
     };
 
 
