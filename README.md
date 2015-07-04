@@ -145,8 +145,12 @@ gpg: Good signature from "David Waterston <david@davidwaterston.com>" [ultimate]
 ```
 The important thing to notice here is that the RSA key ID matches mine (A7AD9C85) and the line that says that this is a good signature.
 
-  The public key can further be verified by checking the details held on <a href="http://pgp.mit.edu/pks/lookup?search=david%40davidwaterston.com&op=index&fingerprint=on&exact=on" target="_blank" alt="pgp.mit.edu">pgp.mit.edu</a>.
+The public key can further be verified by checking the details held on <a href="http://pgp.mit.edu/pks/lookup?search=david%40davidwaterston.com&op=index&fingerprint=on&exact=on" target="_blank" alt="pgp.mit.edu">pgp.mit.edu</a>.
 
+##Missing a feature? 
+[Add your idea](http://feathub.com/davidwaterston/goto-matching-bracket/features/new) or [vote on your favorite feature](http://feathub.com/davidwaterston/goto-matching-bracket) to be implemented:
+
+[![Feature Requests](http://feathub.com/davidwaterston/goto-matching-bracket?format=svg)](http://feathub.com/davidwaterston/goto-matching-bracket)
 
 ## License
 Copyright (c) 2015 David Waterston. All rights reserved.
