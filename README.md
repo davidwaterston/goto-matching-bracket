@@ -3,7 +3,7 @@
 [![Semantic Versioning](https://img.shields.io/github/release/davidwaterston/goto-matching-bracket.svg)](http://semver.org/)
 [![MIT Licence](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/davidwaterston/goto-matching-bracket/blob/master/LICENSE)
 [![Releases signed with Gnu Privacy Guard](https://img.shields.io/badge/gpg-signed-green.svg)](#verifying-releases)
-[![Stories in Progress](https://badge.waffle.io/davidwaterston/goto-matching-bracket.svg?label=in%20progress&title=In Progress)](http://waffle.io/davidwaterston/goto-matching-bracket)
+[![Stories in Progress](https://badge.waffle.io/davidwaterston/goto-matching-bracket.svg?label=in%20progress&title=in progress)](http://waffle.io/davidwaterston/goto-matching-bracket)
 [![Join the Chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/davidwaterston/goto-matching-bracket)
 
 
