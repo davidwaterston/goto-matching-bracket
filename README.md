@@ -1,9 +1,11 @@
 ## 'Go to Matching Bracket' in Brackets editor
 
-<a href="http://semver.org" target="_blank" alt="Semantic Versioning"><img src="https://img.shields.io/badge/semver-2.1.0-lightgrey.svg?style=flat-square"></a>
-<a href="https://github.com/davidwaterston/goto-matching-bracket/blob/master/LICENSE" target="_blank" alt="MIT License"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"></a>
-<a href="#verifying-releases" alt="Releases signed with Gnu Privacy Guard"><img src="https://img.shields.io/badge/gpg-signed-green.svg?style=flat-square"></a>
-<a href="https://gitter.im/davidwaterston/goto-matching-bracket" target="_blank" alt="Join the chat at https://gitter.im/davidwaterston/goto-matching-bracket"><img src="https://badges.gitter.im/Join%20Chat.svg"></a>
+[![Semantic Versioning](https://img.shields.io/github/release/davidwaterston/goto-matching-bracket.svg)](http://semver.org/)
+[![MIT Licence](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/davidwaterston/goto-matching-bracket/blob/master/LICENSE)
+[![Releases signed with Gnu Privacy Guard](https://img.shields.io/badge/gpg-signed-green.svg)](#verifying-releases)
+[![Stories in Progress](https://badge.waffle.io/davidwaterston/goto-matching-bracket.svg?label=in%20progress&title=In Progress)](http://waffle.io/davidwaterston/goto-matching-bracket)
+[![Join the Chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/davidwaterston/goto-matching-bracket)
+
 
 A [Brackets](http://brackets.io/) extension to instantly locate and place the cursor on the matching bracket to the one under the cursor. Adds an entry called _Go to Matching Bracket_ to the _Navigate_ menu with a shortcut of Command-Alt-&#8594; (Mac) or Ctrl-Alt-&#8594; (Windows). **Note that this shortcut was changed in version 2.0.0 as release 1.3 of Brackets now uses the original shortcut for _Expand Current_**.
 
@@ -151,6 +153,9 @@ The public key can further be verified by checking the details held on <a href="
 [Add your idea](http://feathub.com/davidwaterston/goto-matching-bracket/features/new) or [vote on your favorite feature](http://feathub.com/davidwaterston/goto-matching-bracket) to be implemented:
 
 [![Feature Requests](http://feathub.com/davidwaterston/goto-matching-bracket?format=svg)](http://feathub.com/davidwaterston/goto-matching-bracket)
+
+## Future Plans
+Current and planned work for this repo is public and detailed in [Waffle](https://waffle.io/davidwaterston/goto-matching-bracket).
 
 ## License
 Copyright (c) 2015 David Waterston. All rights reserved.
