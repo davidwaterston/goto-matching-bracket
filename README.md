@@ -98,22 +98,6 @@ A: I'm aware that the appearance of the English text for the menu item I add can
 A: That's not really a question but, if you think one of the translations is wrong or could be improved, please let me know by commenting in [_Issues_](https://github.com/davidwaterston/goto-matching-bracket/issues).
 
 
-## Release History
-| Date | Version | Summary of Change |
-| :--- | :------ | :---------------- |
-| 2015/05/24 | v2.1.0 | Added French translation and simplified setup of an object to reduce confusion. There were no functional changes.
-| 2015/04/23 | v2.0.1 | Bug fix: a comma went astray in the package.json, rendering it invalid. |
-| 2015/04/23 | v2.0.0 | Breaking change: With the release of Brackets 1.3 the original keyboard shortcut used by this extension - Command-Alt-] (Mac) or Ctrl-Alt-] (Windows) - has been taken by the Brackets _Expand Current_ command. This release changes the default shortcut and confirms the extension continues to work in v1.3. |
-| 2015/04/06 | v1.7.0 | Added new preference setting, _enabled_, which allows the extension to temporarily be turned off. |
-| 2015/03/31 | v1.6.0 | Added .editorconfig, to ensure consistency of whitespace across different editors and IDEs. |
-| 2015/03/29 | v1.5.0 | Documentation update. Added a License file and badges to the README.md to indicate the version number, the license type and that the releases are signed using Gnu Privacy Guard (GPG). I also added info about how to verify the signatures on releases/tags. In previous releases I have only increased the version number when there has been functional (no-documentation) changes made to the repo but from now on I will bump the version up even if only documentation has changed. |
-| 2015/03/23 | v1.4.0 | Updated the Command Id of the extension to be a more standards-compliant "davidwaterston.goToMatchingBracket.findMatch" (notice the addition of the 'findMatch'). The main reason for this was to ensure that the extension name would appear when displayed in redmunds's [Display Shortcuts](https://github.com/redmunds/brackets-display-shortcuts) extension which adds a _Show Shortcuts_ item to the Brackets _Help_ menu. <img src="https://dvolvr.files.wordpress.com/2015/03/users_davidwaterston_library_application_support_brackets_extensions_user_davidwaterston_goto-matching-bracket_main_js__test2__e28094_brackets1.png" /> |
-| 2015/03/19 | v1.3.0 | Added translated text in Czech, German, Italian, Polish, Portuguese and Russian. |
-| 2015/03/18 | v1.2.0 | Added two user-definable preferences: maxScanLineLength and maxScanLines.  See above for more details. |
-| 2015/03/17 | v1.1.0 | Added internationalisation support. Currently only English is available. |
-| 2015/03/16 | v1.0.0 | Initial release. |
-
-
 ## Verifying Releases
 I use <a href="http://semver.org" target="_blank" alt="Semantic Versioning">Semantic Versioning</a> to number releases. Each release is tagged with the appropriate version number and signed using <a href="https://www.gnupg.org" target="_blank" alt="Gnu Privacy Guard (GPG)">Gnu Privacy Guard (GPG)</a>. The public key used to sign releases is
 ```
