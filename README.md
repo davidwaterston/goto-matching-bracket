@@ -46,18 +46,16 @@ Should you wish to see it translated into your own language (or you think one of
 
 
 ## Preferences
-There are three preferences which can be set in your Brackets Preferences File to override the default behaviour of this extension:
+There are two preferences which can be set in your Brackets Preferences File to override the default behaviour of this extension:
 
 | Preference | Description | Default Value |
 | :--------- | :---------- | :------------ |
-| enabled | Is the extension enabled (active) or not. If you believe the extension is causing a problem in Brackets or conflicting with another extension, this setting allows you to temporarily turn it off rather than uninstalling it. | true |
 | maxScanLines | The maximum number of lines that will be scanned (searched) to find a match. If, after scanning this number of lines, no match is found then the search will give up _even if a matching bracket exists in the file_. Unless you are working on very large files you are unlikely to want to change this value. | 5000 |
 | maxScanLineLength | The maximum length that a line may be to be considered for scanning. Lines that are longer than this length will be skipped (the scan will continue on to the next line, if we have not reached the start/end of the file). For example, if this value is set to 10 then any line whose length is greater than 10 will be ignored when looking for a matching bracket. This, of course, means that it would be possible to miss a match if this value is set too low. | 10000 |
 
 Should you find that you need to override any of the default values this can be done by editing your preference file using the Brackets _Debug > Open Preferences File_ menu item and adding one, or more, of the following to it:
 
 ```
-"com.github.davidwaterston.gotoMatchingBracket.enabled": true,
 "com.github.davidwaterston.gotoMatchingBracket.maxScanLines": 20000,
 "com.github.davidwaterston.gotoMatchingBracket.maxScanLineLength": 1000,
 ```
@@ -66,7 +64,7 @@ You should, of course, alter the values (after the ':') to the required value.
 
 
 ## Compatibility
-This extension has been tested and confirmed to work on Brackets versions 1.2 and later.
+This extension has been tested and confirmed to work on Brackets versions 1.2 to 1.5 inclusive.
 
 
 ## Frequently Asked Questions
@@ -92,7 +90,7 @@ where you would replace the _Cmd-Shift-Z_ with your preferred key combination.
 You can find more details about the User Key Map file and the available key combinations at [https://github.com/adobe/brackets/wiki/User-Key-Bindings](https://github.com/adobe/brackets/wiki/User-Key-Bindings)
 
 **Q: When will the extension be available in "my language"?**  
-A: I'm aware that the appearance of the English text for the menu item I add can be very jarring if you're using Brackets in another language. I'm adding translations whenever I can but I rely on finding a native speaker who can translate the text. If you're able to translate the text for me please let me know by commenting in [_Issues_](https://github.com/davidwaterston/goto-matching-bracket/issues).
+A: I'm aware that the appearance of the English text for the menu item I add can be very jarring if you're using Brackets in another language. I'm adding translations whenever I can but I rely on finding a native speaker who can translate the text. If you're able to translate the text for me please submit a pull request or let me know by commenting in [_Issues_](https://github.com/davidwaterston/goto-matching-bracket/issues).
 
 **Q: The translation you have for "my language" is totally wrong!**  
 A: That's not really a question but, if you think one of the translations is wrong or could be improved, please let me know by commenting in [_Issues_](https://github.com/davidwaterston/goto-matching-bracket/issues).
@@ -131,9 +129,9 @@ gpg: Good signature from "David Waterston <david@davidwaterston.com>" [ultimate]
 ```
 The important thing to notice here is that the RSA key ID matches mine (A7AD9C85) and the line that says that this is a good signature.
 
-The public key can further be verified by checking the details held on <a href="http://pgp.mit.edu/pks/lookup?search=david%40davidwaterston.com&op=index&fingerprint=on&exact=on" target="_blank" alt="pgp.mit.edu">pgp.mit.edu</a>.
+The public key can further be verified by checking the details held on <a href="http://pgp.mit.edu/pks/lookup?search=david%40davidwaterston.com&op=index&fingerprint=on&exact=on" target="_blank" alt="pgp.mit.edu">pgp.mit.edu</a> or on my <a href="https://keybase.io/davidwaterston/" target="_blank" alt="pgp.mit.edu">Keybase</a> page.
 
-##Missing a feature? 
+##Missing a feature?
 [Add your idea](http://feathub.com/davidwaterston/goto-matching-bracket/features/new) or [vote on your favorite feature](http://feathub.com/davidwaterston/goto-matching-bracket) to be implemented:
 
 [![Feature Requests](http://feathub.com/davidwaterston/goto-matching-bracket?format=svg)](http://feathub.com/davidwaterston/goto-matching-bracket)

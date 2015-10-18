@@ -3,16 +3,21 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+
+## [2.2.0] - 2015-10-18
 ### Added
 - This CHANGELOG.md file, formatted in the convention detailed in [Keep a CHANGELOG](http://keepachangelog.com).
 - Proposed features/changes can be now be suggested/voted for at [FeatHub](http://feathub.com/davidwaterston/goto-matching-bracket). The [README.md](https://github.com/davidwaterston/goto-matching-bracket/blob/master/README.md) now has a new section - [_Missing a feature?_](https://github.com/davidwaterston/goto-matching-bracket#missing-a-feature) - which links directly to this project in [FeatHub](http://feathub.com/davidwaterston/goto-matching-bracket) and includes a dynamic list of the features suggested / votes cast so far.
 - Added badge and new text section - [_Future Plans_](https://github.com/davidwaterston/goto-matching-bracket#future-plans) - in [README.md](https://github.com/davidwaterston/goto-matching-bracket/blob/master/README.md) that links to this project in [Waffle.io](https://waffle.io/davidwaterston/goto-matching-bracket).
 
 ### Changed
-- Removed the _Release History_ section of the [README.md](https://github.com/davidwaterston/goto-matching-bracket/blob/master/README.md) as it is now replaced with this CHANGELOG file.
+- Removed the _enabled_ user preference. As Brackets 1.4+ has the built-in ability to temporarily disable an extension, this feature is no longer required.
+- Removed the _Release History_ section of the [README.md](https://github.com/davidwaterston/goto-matching-bracket/blob/master/README.md) as it is now replaced by this CHANGELOG file.
 - Replaced hardcoded version number badge in [README.md](https://github.com/davidwaterston/goto-matching-bracket/blob/master/README.md) with one that gets latest version number from GitHub.
 - Replaced remaining HTML badges in [README.md](https://github.com/davidwaterston/goto-matching-bracket/blob/master/README.md) with Markdown equivalents.
 - Cosmetic change to the waffle.io badge in [README.md](https://github.com/davidwaterston/goto-matching-bracket/blob/master/README.md); label is now 'in progress' rather than 'In Progress' to make it more consistent with the other badges
+- Added link to my [Keybase](https://keybase.io/davidwaterston) profile from [README.md](https://github.com/davidwaterston/goto-matching-bracket/blob/master/README.md) so that my GPG key can more easily be confirmed.
 
 
 ## [2.1.0] - 2015-04-24
@@ -44,7 +49,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [1.7.0] - 2015-04-06
 
 ### Added
-- Added a new user preference, _enabled_, which allows the extension to be temporarily turned off. This can be useful if you suspect the extension is causing a problem with Brackets or another extension. The default for this setting is _true_ (the extension is enabled). 
+- Added a new user preference, _enabled_, which allows the extension to be temporarily turned off. This can be useful if you suspect the extension is causing a problem with Brackets or another extension. The default for this setting is _true_ (the extension is enabled).
 
 - Added details of the new _enabled_ user preference to the [README.md](https://github.com/davidwaterston/goto-matching-bracket/blob/master/README.md).
 
@@ -89,10 +94,10 @@ This file helps developers define and maintain consistent coding styles between 
 
 ### Added
 - Two new user-definable preferences added: _maxScanLineLength_ and _maxScanLines_.
-  - _maxScanLines_  
+  - _maxScanLines_
 The maximum number of lines that will be scanned (searched) to find a match. If, after scanning this number of lines, no match is found then the search will give up even if a matching bracket exists in the file. Unless you are working on very large files you are unlikely to want to change this value.
 
-  - _maxScanLineLength_  
+  - _maxScanLineLength_
 The maximum length that a line may be to be considered for scanning. Lines that are longer than this length will be skipped (the scan will continue on to the next line, if we have not reached the start/end of the file). For example, if this value is set to 10 then any line whose length is greater than 10 will be ignored when looking for a matching bracket. This, of course, means that it would be possible to miss a match if this value is set too low.
 
 

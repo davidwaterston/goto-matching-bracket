@@ -39,7 +39,7 @@ define(function (require) {
 
     var preferences;
     var preferencesId = "com.github.davidwaterston.gotoMatchingBracket";
-    var defaultPreferences = {enabled: true, maxScanLineLength: 10000, maxScanLines: 5000};
+    var defaultPreferences = {maxScanLineLength: 10000, maxScanLines: 5000};
 
     var charsToMatch = {
         "(": true,
@@ -54,7 +54,6 @@ define(function (require) {
     function loadPreferences() {
 
         preferences = PreferencesManager.getExtensionPrefs(preferencesId);
-        preferences.definePreference("enabled", "boolean", defaultPreferences.enabled);
         preferences.definePreference("maxScanLineLength", "integer", defaultPreferences.maxScanLineLength);
         preferences.definePreference("maxScanLines", "integer", defaultPreferences.maxScanLines);
 
@@ -103,8 +102,6 @@ define(function (require) {
 
     loadPreferences();
 
-    if (preferences.get("enabled")) {
-        init();
-    }
+    init();
 
 });
