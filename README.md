@@ -83,7 +83,7 @@ Lastly, if the _maxScanLineLength_ preference is set too low then some lines in 
 A: It can be difficult to choose a hotkey for an extension. While it's easy enough to avoid the keys assigned by Brackets itself, it's impossible to know what other extensions may be using (or even what external apps might be listening for). If you find that the default key combination (CMD-ALT-] / CTRL-ALT-]) is not suitable you can override my choice by editing your _User Key Map_ file. This is done using the _Debug_... _Open User Key Map_ menu item and adding in a new entry like this in the _overrides_ section:
 
 ```
-"Cmd-Shift-Z": "davidwaterston.goto-matching-bracket.findMatch"
+"Cmd-Shift-Z": "davidwaterston.goToMatchingBracket.findMatch"
 ```
 
 where you would replace the _Cmd-Shift-Z_ with your preferred key combination.
