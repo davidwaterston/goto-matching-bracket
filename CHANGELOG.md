@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 
 
+## [2.2.1] - 2016-01-13
+
+### Changed
+-
+Updated the [README.md](https://github.com/davidwaterston/goto-matching-bracket/blob/master/README.md) to fix the instructions for changing the hotkey used to invoke this extension. This had referenced "davidwaterston.goto-matching-bracket.findMatch" when it should be "davidwaterston.goToMatchingBracket.findMatch".
+
+
 ## [2.2.0] - 2015-10-18
 ### Added
 - This CHANGELOG.md file, formatted in the convention detailed in [Keep a CHANGELOG](http://keepachangelog.com).
