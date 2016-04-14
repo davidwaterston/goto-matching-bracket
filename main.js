@@ -83,6 +83,51 @@ define(function (require) {
 
     }
 
+    function selectToMatchingBracket() {
+
+        var editor = EditorManager.getActiveEditor();
+        var cursorPos = editor.getCursorPos();
+        var line = editor.document.getLine(cursorPos.line);
+        var validChar = (charsToMatch[line.charAt(cursorPos.ch)]) || (cursorPos.ch >= 0 && charsToMatch[line.charAt(cursorPos.ch - 1)]);
+
+        var from, to;
+        if (validChar) {
+            var matchingBrace = editor._codeMirror.findMatchingBracket(
+                editor.getCursorPos(),
+                false,
+                {
+                    maxScanLineLength: preferences.get("maxScanLineLength"),
+                    maxScanLines: preferences.get("maxScanLines")
+                }
+            );
+            if (matchingBrace && matchingBrace.match) {
+                if (matchingBrace.from.line < matchingBrace.to.line) {
+                    from = matchingBrace.from;
+                    to = matchingBrace.to;
+                } else if (matchingBrace.from.line === matchingBrace.to.line) {
+                    if (matchingBrace.from.ch < matchingBrace.to.ch) {
+                        from = matchingBrace.from;
+                        to = matchingBrace.to;
+                    } else {
+                        from = matchingBrace.to;
+                        to = matchingBrace.from;
+                    }
+                } else {
+                    from = matchingBrace.to;
+                    to = matchingBrace.from;
+                }
+                editor.setSelection({
+                    'line': from.line,
+                    'ch': from.ch
+                }, {
+                    'line': to.line,
+                    'ch': to.ch + 1
+                });
+            }
+        }
+
+    }
+
 
     function init() {
 
@@ -93,6 +138,15 @@ define(function (require) {
         menu.addMenuItem(
             COMMAND_ID,
             "Ctrl-Alt-Right",
+            Menus.LAST_IN_SECTION,
+            Menus.MenuSection.NAVIGATE_GOTO_COMMANDS
+        );
+        var COMMAND_ID = "davidwaterston.goToMatchingBracket.selectMatch";
+        CommandManager.register(Strings.MENU_NAVIGATE_SELECT_TO_MATCHING_BRACKET, COMMAND_ID, selectToMatchingBracket);
+
+        menu.addMenuItem(
+            COMMAND_ID,
+            "Ctrl-Shift-Alt-Right",
             Menus.LAST_IN_SECTION,
             Menus.MenuSection.NAVIGATE_GOTO_COMMANDS
         );

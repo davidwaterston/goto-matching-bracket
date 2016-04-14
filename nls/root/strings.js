@@ -28,5 +28,7 @@
 define({
 
     "MENU_NAVIGATE_GOTO_MATCHING_BRACKET": "Go to Matching Bracket"
+    "MENU_NAVIGATE_SELECT_TO_MATCHING_BRACKET": "Select to Matching Bracket"
+
 
 });
